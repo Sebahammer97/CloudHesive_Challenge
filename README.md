@@ -10,17 +10,18 @@ Install dependencies
 
 # Libraries REACT
 
-npm install react-redux
-npm install react-router-dom
-npm i -D eslint babel-eslint eslint-plugin-react
-npm install axios
-npm install antd
+- npm install react-redux
+- npm install react-router-dom
+- npm i -D eslint babel-eslint eslint-plugin-react
+- npm install axios
+- npm install antd
 
 # Libraries Python
 
-pip install flask
-pip install flask_restful
-pip install flask_cors
+- pip install flask
+- pip install flask_restful
+- pip install flask_cors
+- pip install mariadb
 
 #### In case that you want more information about these libraries links below:
 
@@ -39,10 +40,7 @@ Python
 - [flask](https://github.com/pallets/flask/)
 - [flask_restful](https://flask-restful.readthedocs.io/en/latest/)
 - [flask_cors](https://flask-cors.readthedocs.io/en/latest/)
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [mariadb](https://github.com/mariadb-corporation/mariadb-connector-python)
 
 ## This project was styled by [Prettier](https://prettier.io/) and was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
