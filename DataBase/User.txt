@@ -1,0 +1,6 @@
+CREATE USER 'user'@'localhost'
+IDENTIFIED BY 'passwd';
+
+GRANT SELECT, INSERT, UPDATE, DELETE, DROP
+   ON postcards.postcards
+   TO 'user'@'localhost';

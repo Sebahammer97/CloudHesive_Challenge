@@ -1,0 +1,12 @@
+CREATE TABLE `postcards` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`image` LONGTEXT NOT NULL DEFAULT '0' COLLATE 'utf8mb4_unicode_ci',
+	`text` VARCHAR(1500) NULL DEFAULT NULL COLLATE 'latin1_spanish_ci',
+	`state` BIT(1) NOT NULL DEFAULT b'1',
+	PRIMARY KEY (`id`) USING BTREE,
+	UNIQUE INDEX `id` (`id`) USING BTREE
+)
+COLLATE='latin1_spanish_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=35
+;

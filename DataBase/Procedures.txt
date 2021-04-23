@@ -1,0 +1,26 @@
+CREATE DEFINER=`user`@`localhost` PROCEDURE `createPostcard`(
+	IN `image` LONGTEXT,
+	IN `text` VARCHAR(1500),
+	OUT `id` INT
+)
+LANGUAGE SQL
+DETERMINISTIC
+MODIFIES SQL DATA
+SQL SECURITY DEFINER
+COMMENT 'Creacion de postcard'
+BEGIN
+	INSERT INTO postcards (`image`, `text`) VALUES (`image`, `text`);
+	SET `id` = LAST_INSERT_ID();
+END
+
+CREATE DEFINER=`user`@`localhost` PROCEDURE `getPostcard`(
+	IN `code` INT
+)
+LANGUAGE SQL
+DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT 'Obtener un postcard'
+BEGIN
+	SELECT `id`, p.`image`, p.`text` FROM postcards p WHERE p.id = `code` AND `state` = 1;
+END

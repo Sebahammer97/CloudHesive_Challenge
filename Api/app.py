@@ -21,7 +21,8 @@ def initConnDB():
             password="passwd",
             host="localhost",
             port=3306,
-            database="postcards")
+            database="postcards",
+            autocommit = True)
             
         # Instantiate Cursor
         cursor = conn.cursor()
