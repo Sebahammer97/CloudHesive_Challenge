@@ -1,13 +1,50 @@
-# Libraries
+# Instructive
+
+## First step
+
+Copy this repository locally into your computer
+
+## Second step
+
+Install dependencies
+
+# Libraries REACT
 
 npm install react-redux
 npm install react-router-dom
+npm i -D eslint babel-eslint eslint-plugin-react
 npm install axios
 npm install antd
+
+# Libraries Python
+
+pip install flask
+pip install flask_restful
+pip install flask_cors
+
+#### In case that you want more information about these libraries links below:
+
+React
+
+- [react-redux](https://react-redux.js.org/)
+- [react-router-dom](https://reactrouter.com/web/guides/philosophy)
+- [eslint babel-eslint](https://github.com/babel/babel-eslint)
+- [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
+- [axios](https://github.com/axios/axios)
+- [antd](https://github.com/ant-design/ant-design)
+- [@ant-design/icons](https://ant.design/components/icon/)
+
+Python
+
+- [flask](https://github.com/pallets/flask/)
+- [flask_restful](https://flask-restful.readthedocs.io/en/latest/)
+- [flask_cors](https://flask-cors.readthedocs.io/en/latest/)
 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## This project was styled by [Prettier](https://prettier.io/) and was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
