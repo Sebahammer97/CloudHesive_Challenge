@@ -23,7 +23,7 @@ Install dependencies
 - pip install flask_cors
 - pip install mariadb
 
-#### In case that you want more information about these libraries links below:
+## In case that you want more information about these libraries links below:
 
 React
 
