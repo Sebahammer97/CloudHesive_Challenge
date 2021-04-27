@@ -4,36 +4,8 @@ from flask_restful import Resource, Api
 from flask_cors import CORS
 
 import sys
-import mariadb
 
 from postcards import create, get
-
-#== Global Variables =================================================================
-conn = {}
-cursor = {}
-
-# Instantiate Connection to the DB
-def initConnDB():
-    global conn, cursor
-    try:
-        conn = mariadb.connect(
-            user="user",
-            password="passwd",
-            host="localhost",
-            port=3306,
-            database="postcards",
-            autocommit = True)
-            
-        # Instantiate Cursor
-        cursor = conn.cursor()
-    except mariadb.Error as e:
-        print(f"Error connecting to MariaDB Platform: {e}")
-        sys.exit(1)
-
-def closeConnDB():
-    global conn, cursor
-    cursor.close()
-    conn.close()
 
 # Instantiate Flask Server
 try:
@@ -47,12 +19,10 @@ except Flask.errorhandler as e:
 #== Classes ===========================================================================
 class Postcards(Resource):
     def post(self):        
-        try:
-            initConnDB()
+        try:            
             data = request.json['data']
             if(data is not None):
-                response = create(conn, cursor, data)
-                closeConnDB()        
+                response = create(data)                       
                 data = {'message': response, 'code': 'SUCCESS'}        
                 return make_response(jsonify(data), 200)
             else:
@@ -61,12 +31,10 @@ class Postcards(Resource):
             data = {'message': 'Error', 'code': 'ERROR'}
             return make_response(jsonify(data), 404)
     def get(self):
-        try:
-            initConnDB()
+        try:            
             id = request.args.get('id')
             if(id is not None):
-                response = get(conn, cursor, id)
-                closeConnDB()        
+                response = get(id)                       
                 data = {'message': response, 'code': 'SUCCESS'}        
                 return make_response(jsonify(data), 200)
         except:
