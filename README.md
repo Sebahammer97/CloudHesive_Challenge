@@ -43,12 +43,17 @@ Python
 - [mariadb](https://github.com/mariadb-corporation/mariadb-connector-python)
 
 ## Third step
-The Data Base used in this project is MariaDB
-Run the scripts of the data base in these order, which they are on the DataBase folder:
+The Data Base used in this project is MariaDB.\
+Run the scripts of the data base in these order, which they are on the "DataBase" folder:
 - 1° DataBase.txt
 - 2° Tables.txt
 - 3° User.txt
 - 4° Procedures.txt
+
+## Four step
+
+Open the folder "React" with the Visual Studio Code and type this command on the terminal: `npm start`.\
+Also, in an other Visual Studio Code window, open the folder "Api", check to be on the app.py file and then press ctrl + f5 to run the script.
 
 ## This project was styled by [Prettier](https://prettier.io/) and was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
